@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <title>Esercizio con array</title>
+</head>
+<body>
+
+<h2>Esercizio con array</h2>
+<div id="out"></div>
+
+<script>
+  int numeri = [];
+  for (int i = 0; i < 100; i++) {
+    numeri.(Math.random() * 201) - 100;
+  }
+
+  int somma = 0;
+  for (int n of numeri) somma += n;
+  int media = somma / numeri.length;
+  int max = Math.max(numeri);
+  int min = Math.min(numeri);
+
+  
+  int maggiori50 = [];
+  
+  
+  
