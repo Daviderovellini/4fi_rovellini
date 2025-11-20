@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Anagrafica e Generazione</title>
+</head>
+<body>
+
+<script>
+
+    // Raccolta dati
+    const nome = prompt("Nome:");
+    const cognome = prompt("Cognome:");
+    const indirizzo = prompt("Indirizzo:");
+    const citta = prompt("Città:");
+    const cap = prompt("CAP:");
+    const annoNascita = parseInt(prompt("Anno di nascita (es. 2005):"));
+
+    // Calcolo età
+    const annoAttuale = 2025; 
+    const eta = annoAttuale - annoNascita;
+
+    // Funzione per la generazione
+    function trovaGenerazione(anno) {
+        if (anno >= 2013) return "Generazione Alpha";
+        if (anno >= 1997) return "Generazione Z";
+        if (anno >= 1981) return "Millennials";
+        if (anno >= 1965) return "Generazione X";
+        if (anno >= 1946) return "Baby Boomers";
+        if (anno >= 1928) return "Generazione Silenziosa";
+        if (anno >= 1901) return "Greatest Generation";
+        return "Non definita";
+    }
+
+    const generazione = trovaGenerazione(annoNascita);
+
+    // Output nella pagina
+    document.write("<h2>Dati Utente</h2>");
+    document.write("Nome: " + nome + "<br>");
+    document.write("Cognome: " + cognome + "<br>");
+    document.write("Indirizzo: " + indirizzo + "<br>");
+    document.write("Città: " + citta + "<br>");
+    document.write("CAP: " + cap + "<br>");
+    document.write("Età: " + eta + "<br>");
+    document.write("Generazione: " + generazione + "<br>");
+
+</script>
+
+</body>
+</html>
