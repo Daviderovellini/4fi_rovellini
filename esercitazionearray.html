@@ -32,14 +32,9 @@
 
     let generazione = trovaGenerazione(annoNascita);
 
-    document.write("<h2>Dati Utente</h2>");
-    document.write("Nome: " + nome + "<br>");
-    document.write("Cognome: " + cognome + "<br>");
-    document.write("Indirizzo: " + indirizzo + "<br>");
-    document.write("Città: " + citta + "<br>");
-    document.write("CAP: " + cap + "<br>");
-    document.write("Età: " + eta + "<br>");
-    document.write("Generazione: " + generazione + "<br>");
+       document.getElementById("risultato").innerHTML =
+        nome + "<br>" + cognome + "<br>" + indirizzo + "<br>" + citta "<br>" + cap "<br>" + annoNascita "<br>";
+}
 
 </script>
 
