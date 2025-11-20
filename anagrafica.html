@@ -31,14 +31,14 @@ AnnoNascita: <input id= "annoNascita"><br>
 
       var generazione = "";
 
-      if (annoNascita >= 1901 && annoNascita <= 1927) return generazione = "Greatest Generation";
-      else if (annoNascita >= 1928 && annoNascita <= 1945) return generazione = "Generazione Silenziosa";
-      else if (annoNascita >= 1946 && annoNascita <= 1964) return generazione = "Baby Boomers";
-      else if (annoNascita >= 1965 && annoNascita <= 1980) return generazione = "Generazione X";
-      else if (annoNascita >= 1981 && annoNascita <= 1996) return generazione = "Millennials";
-      else if (annoNascita >= 1997 && annoNascita <= 2012) return generazione = "Generazione Z";
-      else if (annoNascita >= 2013) return generazione = "Generazione Alpha";
-      else return generazione = "Anno non valido";
+      if (annoNascita >= 1901 && annoNascita <= 1927)  generazione = "Greatest Generation";
+      else if (annoNascita >= 1928 && annoNascita <= 1945)  generazione = "Generazione Silenziosa";
+      else if (annoNascita >= 1946 && annoNascita <= 1964)  generazione = "Baby Boomers";
+      else if (annoNascita >= 1965 && annoNascita <= 1980)  generazione = "Generazione X";
+      else if (annoNascita >= 1981 && annoNascita <= 1996)  generazione = "Millennials";
+      else if (annoNascita >= 1997 && annoNascita <= 2012)  generazione = "Generazione Z";
+      else if (annoNascita >= 2013)  generazione = "Generazione Alpha";
+      else  generazione = "Anno non valido";
 
       document.getElementById("output").innerHTML =
         "<b>Generazione:</b> " + generazione;
