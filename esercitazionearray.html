@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
     <title>Anagrafica e Generazione</title>
 </head>
 <body>
 
 <script>
 
-    // Raccolta dati
-    const nome = prompt("Nome:");
-    const cognome = prompt("Cognome:");
-    const indirizzo = prompt("Indirizzo:");
-    const citta = prompt("Città:");
-    const cap = prompt("CAP:");
-    const annoNascita = parseInt(prompt("Anno di nascita (es. 2005):"));
+    let nome = prompt("Nome:");
+    let cognome = prompt("Cognome:");
+    let indirizzo = prompt("Indirizzo:");
+    let citta = prompt("Città:");
+    let cap = prompt("CAP:");
+    let annoNascita = (prompt("Anno di nascita:"));
 
-    // Calcolo età
-    const annoAttuale = 2025; 
-    const eta = annoAttuale - annoNascita;
+    
+    let annoAttuale = 2025; 
+    let eta = annoAttuale - annoNascita;
 
-    // Funzione per la generazione
+    
     function trovaGenerazione(anno) {
         if (anno >= 2013) return "Generazione Alpha";
         if (anno >= 1997) return "Generazione Z";
@@ -32,9 +30,8 @@
         return "Non definita";
     }
 
-    const generazione = trovaGenerazione(annoNascita);
+    let generazione = trovaGenerazione(annoNascita);
 
-    // Output nella pagina
     document.write("<h2>Dati Utente</h2>");
     document.write("Nome: " + nome + "<br>");
     document.write("Cognome: " + cognome + "<br>");
