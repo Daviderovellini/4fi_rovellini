@@ -30,13 +30,13 @@ AnnoNascita: <input id= "annoNascita"><br>
 
       var generazione = "";
 
-      if (anno >= 1901 && anno <= 1927) generazione = "Greatest Generation";
-      else if (anno >= 1928 && anno <= 1945) generazione = "Generazione Silenziosa";
-      else if (anno >= 1946 && anno <= 1964) generazione = "Baby Boomers";
-      else if (anno >= 1965 && anno <= 1980) generazione = "Generazione X";
-      else if (anno >= 1981 && anno <= 1996) generazione = "Millennials";
-      else if (anno >= 1997 && anno <= 2012) generazione = "Generazione Z";
-      else if (anno >= 2013) generazione = "Generazione Alpha";
+      if (annoNascita >= 1901 && annoNascita <= 1927) generazione = "Greatest Generation";
+      else if (annoNascita >= 1928 && annoNascita <= 1945) generazione = "Generazione Silenziosa";
+      else if (annoNascita >= 1946 && annoNascita <= 1964) generazione = "Baby Boomers";
+      else if (annoNascita >= 1965 && annoNascita <= 1980) generazione = "Generazione X";
+      else if (annoNascita >= 1981 && annoNascita <= 1996) generazione = "Millennials";
+      else if (annoNascita >= 1997 && annoNascita <= 2012) generazione = "Generazione Z";
+      else if (annoNascita >= 2013) generazione = "Generazione Alpha";
       else generazione = "Anno non valido";
 
       document.getElementById("output").innerHTML =
@@ -45,7 +45,7 @@ AnnoNascita: <input id= "annoNascita"><br>
         "<b>Indirizzo:</b> " + indirizzo + "<br>" +
         "<b>Città:</b> " + citta + "<br>" +
         "<b>CAP:</b> " + cap + "<br>" +
-        "<b>Anno di nascita:</b> " + anno + "<br>" +
+        "<b>Anno di nascita:</b> " + annoNascita + "<br>" +
         "<b>Generazione:</b> " + generazione;
     }
   </script>
