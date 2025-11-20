@@ -23,16 +23,22 @@ function generazioneAnno{
     else if (anno>=1928) return "fai parte della generazione Silenziosa"
     else if (anno>=1901) return "fai parte della generazione Greatwst Generation"
 }
- <p><strong>Cognome:</strong> ${cognome}</p>
+const generazione = generazioneAnno(annoNascita);
+
+        document.getElementById("output").innerHTML = `
+            <p><strong>Nome:</strong> ${nome}</p>
+            <p><strong>Cognome:</strong> ${cognome}</p>
             <p><strong>Indirizzo:</strong> ${indirizzo}</p>
             <p><strong>Città:</strong> ${citta}</p>
             <p><strong>CAP:</strong> ${cap}</p>
             <p><strong>Anno di nascita:</strong> ${annoNascita}</p>
             <p><strong>Generazione:</strong> ${generazione}</p>
+        ;
  </script>
 
 </body>
 </html>
+
 
 
 
