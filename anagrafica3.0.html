@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<head>
+  <title>Anagrafica Utente</title>
+</head>
+<body>
+  <h2>Inserisci i tuoi dati:</h2>
+  
+function controlla() {     
 
+        for(i=0;i<document.getElementsByName ("colori").length;i++) {
+
+          if(document.getElementsByName("colori")[i].checked){
+
+           document.getElementById("risp").innerHTML = document.getElementsByName("colori")[i].value
+           }
+      }
+ }
+
+   </script>
+ </head>
+ <body>
+        <input type="radio" name="sesso" value="maschio">M<br>
+        <input type="radio" name="sesso" value="femmina">F<br>
+        <input type="radio" name="sesso" value="altro">Altro<br>
+        <input type="button" onclick="controlla();" value="Invia">
+         </div>
+         <p id="risp"></p>
+         </body>
+        </html>
+
+  <input type="checkbox" id="box1" name="bici" value="bici" onclick="onClickHandler(document.getElementById('box1').value);">
+
+  <label for="vehicle1"> Ho una bici</label><br>
+
+  <input type="checkbox" id="box2" name="auto" value="auto" onclick="onClickHandler(document.getElementById('box2').value);">
+
+  <label for="vehicle2"> Ho un auto</label><br>
+
+  <input type="checkbox" id="box3" name="barca" value="barca" onclick="onClickHandler(document.getElementById('box3').value);">
+
+  <label for="vehicle3"> Ho una barca</label><br>
+
+  <p id="risp"></p>
+
+ <script>
+
+  function onClickHandler(s){
+    document.getElementById("risp").innerHTML += s + ", ";
+  }
+   <html>
+
+    <body>
+
+    <div style="margin-left:100px:">
+
+	<div id="div0" style="position: absolute; top: 0px; left: 100px;">
+
+        <select id="prov" onchange="Validate()">
+
+            <option value="0">Select</option>
+
+            <option value="1">MI</option>
+
+            <option value="2">VA</option>
+
+            <option value= "3"><NA>/option>
+
+        </select>
+
+  </script>
+</body>
+</html>
