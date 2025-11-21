@@ -20,16 +20,16 @@ AnnoNascita: <input id= "annoNascita"><br>
 
   <script>
     function mostraAnagrafica() {
-      var nome = document.getElementById("nome").value;
-      var cognome = document.getElementById("cognome").value;
-      var indirizzo = document.getElementById("indirizzo").value;
-      var citta = document.getElementById("citta").value;
-      var cap = document.getElementById("cap").value;
-      var annoNascita = document.getElementById("annoNascita").value;
+      let nome = document.getElementById("nome").value;
+      let cognome = document.getElementById("cognome").value;
+      let indirizzo = document.getElementById("indirizzo").value;
+      let citta = document.getElementById("citta").value;
+      let cap = document.getElementById("cap").value;
+      let annoNascita = document.getElementById("annoNascita").value;
 
-      var annoNascita = new Date(annoNascita).getFullYear();
+      let annoNascita = new Date(annoNascita).getFullYear();
 
-      var generazione = "";
+      let generazione = "";
 
       if (annoNascita >= 1901 && annoNascita <= 1927)  generazione = "Greatest Generation";
       else if (annoNascita >= 1928 && annoNascita <= 1945)  generazione = "Generazione Silenziosa";
