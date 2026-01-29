@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Anagrafica 4.0</title>
+</head>
+<body>
+
+<h2>Inserimento dati</h2>
+
+<form id="form">
+  Nome: <input type="text" id="nome"><br><br>
+  Cognome: <input type="text" id="cognome"><br><br>
+
+  Sesso:
+  <input type="radio" name="sesso" value="M"> M
+  <input type="radio" name="sesso" value="F"> F<br><br>
+
+  Città: <input type="text" id="citta"><br><br>
+
+  <button type="button" onclick="salva()">Salva</button>
+</form>
+
+<hr>
+
+<h2>Elenco utenti</h2>
+
+<table border="1">
+  <tr>
+    <th>Nome</th>
+    <th>Cognome</th>
+    <th>Sesso</th>
+    <th>Città</th>
+  </tr>
+  <tbody id="tabella"></tbody>
+</table>
+
+<script>
+  // prendo i dati salvati (se non ci sono → array vuoto)
+  let utenti = JSON.parse(localStorage.getItem("utenti")) || [];
+
+  function salva() {
+    let sesso = document.querySelector('input[name="sesso"]:checked').value;
+
+    let utente = {
+      nome: document.getElementById("nome").value,
+      cognome: document.getElementById("cognome").value,
+      sesso: sesso,
+      citta: document.getElementById("citta").value
+    };
+
+    utenti.push(utente);
+    localStorage.setItem("utenti", JSON.stringify(utenti));
+
+    document.getElementById("form").reset();
+    stampa();
+  }
+
+  function stampa() {
+    let tbody = document.getElementById("tabella");
+    tbody.innerHTML = "";
+
+    utenti.forEach(u => {
+      let riga = document.createElement("tr");
+      riga.innerHTML = `
+        <td>${u.nome}</td>
+        <td>${u.cognome}</td>
+        <td>${u.sesso}</td>
+        <td>${u.citta}</td>
+      `;
+      tbody.appendChild(riga);
+    });
+  }
+
+  stampa();
+</script>
+
+</body>
+</html>
