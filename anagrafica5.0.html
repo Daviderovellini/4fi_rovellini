@@ -62,7 +62,7 @@
       let cap = document.getElementById('cap').value;
       let dataNascita = document.getElementById('dataNascita').value;
       let sesso = document.querySelector('input[name="sesso"]:checked');
-      let sessosel = sesso ? sesso.value : "";
+    
 
       let mezzo = document.('input[type="checkbox"]:checked');
       let mezziSelezionati = [];
@@ -83,7 +83,7 @@
         mezzi: mezziSelezionati
       };
 
-      let anagrafica = JSON.parse(localStorage.getItem("anagrafica")) || [];
+      let anagrafica = JSON.parse(localStorage.getItem("anagrafica"));
       anagrafica.push(persona);
       localStorage.setItem("anagrafica", JSON.stringify(anagrafica));
 
