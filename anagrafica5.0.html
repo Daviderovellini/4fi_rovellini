@@ -61,12 +61,12 @@
       let citta = document.getElementById('citta').value;
       let cap = document.getElementById('cap').value;
       let dataNascita = document.getElementById('dataNascita').value;
-      let sesso = document.querySelector('input[name="sesso"]:checked');
+      let sesso = document.('input[name="sesso"]:checked');
     
 
       let mezzo = document.('input[type="checkbox"]:checked');
       let mezziSelezionati = [];
-      mezzo.forEach(cb => mezziSelezionati.push(cb.value));
+      mezzo.forEach(mezziSelezionati.push(cb.value));
 
       let provincia = document.('select[name="provincia"]').value;
 
@@ -74,7 +74,7 @@
       let persona = {
         nome: nome,
         cognome: cognome,
-        sesso: sessosel,
+        sesso: sesso,
         indirizzo: indirizzo,
         citta: citta,
         cap: cap,
